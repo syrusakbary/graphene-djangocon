@@ -32,9 +32,8 @@ class Query(graphene.ObjectType):
         return context.user
 
 
-schema = graphene.Schema(name='MySchema')
-
-# schema = graphene.Schema(name='MySchema', middlewares=[DjangoDebugMiddleware()])
+# schema = graphene.Schema(name='MySchema')
+schema = graphene.Schema(name='MySchema', middlewares=[DjangoDebugMiddleware()])
 
 schema.register(Talk)
 
