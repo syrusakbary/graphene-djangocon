@@ -23,7 +23,7 @@ class Talk(DjangoObjectType):
 
 class Query(graphene.ObjectType):
     me = graphene.Field(User)
-    # debug = graphene.Field(DjangoDebug, name='__debug')
+    debug = graphene.Field(DjangoDebug, name='__debug')
 
     @with_context
     def resolve_me(self, args, context, info):
